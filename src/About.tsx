@@ -1,4 +1,5 @@
 import bgColored from "./assets/img/rainbow.webp";
+import AboutImg from "./assets/img/about.webp";
 const About = () => {
   return (
     <div>
@@ -23,6 +24,37 @@ const About = () => {
           </div>
         </div>
       </header>
+
+      {/* Who we are */}
+      <div className="py-[80px] px-[5%]">
+        <h1 className="text-[#BB1B06] pb-2 text-[14px] font-MerriSemiBold">
+          Who we are
+        </h1>
+        <h1 className="text-[36px] pb-7 text-[#131D2C] font-MerriSemiBold">
+          The Company
+        </h1>
+        <div>
+          <div>
+            <div>
+              <img src={AboutImg} className="w-[572px] h-[320px]" alt="about" />
+            </div>
+          </div>
+          <div className="bg-[#F8F8F8] px-[30px] py-[19px]">
+            <div className="border-l-2 border-[#BB1B06] pl-3">
+              <h1 className="text-[#131D2C] font-MerriLight">
+                “Our ambition is to be the preferred
+              </h1>
+              <h1 className="text-[#131D2C] font-MerriLight">
+                international financial partner for our clients”
+              </h1>
+              <h1 className="text-[14px] font-MerriRegular">
+                <span className="font-MerriBold">Buba Yusuf</span> - Managing
+                Director{" "}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
