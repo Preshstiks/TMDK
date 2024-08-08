@@ -1,5 +1,6 @@
 import bgColored from "./assets/img/rainbow.webp";
 import AboutImg from "./assets/img/about.webp";
+import Frame from "./assets/img/frame.webp";
 const About = () => {
   return (
     <div>
@@ -34,23 +35,46 @@ const About = () => {
           The Company
         </h1>
         <div>
-          <div>
+          <div className="relative">
             <div>
               <img src={AboutImg} className="w-[572px] h-[320px]" alt="about" />
             </div>
+            <div className="py-[46px] px-[64px] absolute bottom-0 left-[500px] right-0 max-w-[798px] bg-[#F8F8F8]">
+              <h1 className="text-[#131D2C] font-MerriRegular text-[24px]">
+                Our philosophy is to boost
+              </h1>
+              <h1 className="text-[#131D2C] font-MerriRegular text-[24px]">
+                prosperity, foster economic
+              </h1>
+              <h1 className="text-[#131D2C] font-MerriRegular text-[24px]">
+                growth and advancing
+              </h1>
+              <h1 className="text-[#131D2C] font-MerriRegular text-[24px]">
+                development.
+              </h1>
+              <div className="font-MerriRegular text-[14px] text-[#667085] pt-4">
+                <h1>Our journey is marked by innovation, strategic growth,</h1>
+                <h1>and a commitment to excellence in everything we do</h1>
+              </div>
+            </div>
           </div>
-          <div className="bg-[#F8F8F8] px-[30px] py-[19px]">
-            <div className="border-l-2 border-[#BB1B06] pl-3">
-              <h1 className="text-[#131D2C] font-MerriLight">
-                “Our ambition is to be the preferred
-              </h1>
-              <h1 className="text-[#131D2C] font-MerriLight">
-                international financial partner for our clients”
-              </h1>
-              <h1 className="text-[14px] font-MerriRegular">
-                <span className="font-MerriBold">Buba Yusuf</span> - Managing
-                Director{" "}
-              </h1>
+          <div className="flex">
+            <div className="bg-[#F8F8F8] w-full px-[30px] py-[19px]">
+              <div className="border-l-2 border-[#BB1B06] pl-3">
+                <h1 className="text-[#131D2C] font-MerriLight">
+                  “Our ambition is to be the preferred
+                </h1>
+                <h1 className="text-[#131D2C] font-MerriLight">
+                  international financial partner for our clients”
+                </h1>
+                <h1 className="text-[14px] font-MerriRegular">
+                  <span className="font-MerriBold">Buba Yusuf</span> - Managing
+                  Director{" "}
+                </h1>
+              </div>
+            </div>
+            <div className="w-full">
+              <img src={Frame} className="h-[110px] w-full" alt="frame" />
             </div>
           </div>
         </div>
