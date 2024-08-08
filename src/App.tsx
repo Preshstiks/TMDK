@@ -3,6 +3,7 @@ import "./App.css";
 import LightNavbar from "./components/generalComponents/LightNavbar";
 import Home from "./Home";
 import About from "./About";
+import Footer from "./components/generalComponents/Footer";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/career" element={<h1>Career</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} /> */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

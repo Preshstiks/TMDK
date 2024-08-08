@@ -2,11 +2,12 @@ import bgColored from "./assets/img/rainbow.webp";
 import AboutImg from "./assets/img/about.webp";
 import Frame from "./assets/img/frame.webp";
 import { RxDot } from "react-icons/rx";
-
+import Logo from "./assets/img/trans.webp";
+import { GoArrowRight } from "react-icons/go";
 const About = () => {
   return (
     <div>
-      <header className="bg-[#182736] h-[60vh] px-[5%] pb-[80px] relative">
+      <header className="bg-[#182736] h-[60vh] px-[7%]  pb-[80px] relative">
         <div className="pt-[112px]">
           <h1 className="font-MerriBold leading-[60px] text-[48px] text-white">
             Empowering Nigeria's Future:
@@ -29,11 +30,11 @@ const About = () => {
       </header>
 
       {/* Who we are */}
-      <div className="py-[80px] px-[5%]">
+      <div className="py-[80px] px-[7%] ">
         <h1 className="text-[#BB1B06] pb-2 text-[14px] font-MerriSemiBold">
           Who we are
         </h1>
-        <h1 className="text-[36px] pb-7 text-[#131D2C] font-MerriSemiBold">
+        <h1 className="text-[30px] pb-7 text-[#131D2C] font-MerriSemiBold">
           The Company
         </h1>
         <div>
@@ -121,7 +122,7 @@ const About = () => {
       </div>
 
       {/* Values */}
-      <div className="bg-[#182736] px-[5%] py-[80px]">
+      <div className="bg-[#182736] px-[7%]  py-[80px]">
         <h1 className="text-[#BB1B06] pb-2 text-[20px] font-MerriSemiBold">
           Values
         </h1>
@@ -205,6 +206,150 @@ const About = () => {
                 <h1>value creation.</h1>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Team */}
+      <div className="px-[7%] py-[80px]">
+        <h1 className="text-[#BB1B06] pb-2 text-[14px] font-MerriSemiBold">
+          Our Team
+        </h1>
+        <h1 className="text-[30px] pb-7 text-[#131D2C] font-MerriSemiBold">
+          Meet TMDK Leadership team
+        </h1>
+
+        <div>
+          <div className="flex justify-between">
+            <div>
+              <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" />
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                  Nikolas Gibbons
+                </h1>
+                <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                  Group Chairman
+                </h1>
+              </div>
+            </div>
+            <div>
+              {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+              <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                  Lily-Rose Chedjou
+                </h1>
+                <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                  Executive Director
+                </h1>
+              </div>
+            </div>
+            <div>
+              {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+              <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                  Zahra Christensen
+                </h1>
+                <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                  Agro Park
+                </h1>
+              </div>
+            </div>
+            <div>
+              {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+              <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                  Sienna Hewitt
+                </h1>
+                <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                  Petrochemical
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between pt-10">
+            <img src={Logo} className="w-[350px] h-[490px]" alt="logo" />
+            <div className="flex justify-between space-x-9 relative">
+              <div>
+                {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+                <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+                <div className="pt-5">
+                  <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                    Lily-Rose Chedjou
+                  </h1>
+                  <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                    Executive Director
+                  </h1>
+                </div>
+              </div>
+              <div>
+                {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+                <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+                <div className="pt-5">
+                  <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                    Zahra Christensen
+                  </h1>
+                  <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                    Agro Park
+                  </h1>
+                </div>
+              </div>
+              <div>
+                {/* <img src={AboutImg} alt="about" className="w-[400px] h-[250px]" /> */}
+                <div className="w-[220px] h-[250px] bg-[#F8F8F8]"></div>
+                <div className="pt-5">
+                  <h1 className="text-[#101828] text-[20px] font-MerriSemiBold">
+                    Sienna Hewitt
+                  </h1>
+                  <h1 className="text-[#BB1B06] text-[15px] font-MerriRegular">
+                    Petrochemical
+                  </h1>
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-[-35px]">
+                <div className="w-full">
+                  <div className="border-l-2 border-[#BB1B06] pl-3">
+                    <h1 className="text-[#131D2C] font-MerriLight">
+                      We believe that our people are our greatest asset. Our
+                      diverse, talented, and
+                    </h1>
+                    <h1 className="text-[#131D2C] font-MerriLight">
+                      dedicated workforce is the driving force behind our
+                      success and continued
+                    </h1>
+                    <h1 className="text-[#131D2C] font-MerriLight">
+                      growth. We are proud to have assembled a team of
+                      professionals who bring
+                    </h1>
+                    <h1 className="text-[#131D2C] font-MerriLight">
+                      passion, expertise, and innovation to every aspect of our
+                      operations.
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Build your future */}
+      <div className="bg-[#F8F8F8] px-[7%] py-[80px]">
+        <div className="bg-white text-center p-[64px]">
+          <h1 className="text-[#101828] pb-4 text-[30px] font-MerriBold">
+            Build Your Future with Us
+          </h1>
+          <div className="text-[17px] text-[#475467] font-MerriRegular">
+            <h1>We’re always looking for smart, motivated people.</h1>
+            <h1>connect with us on Linkedin. We’d love to meet you!</h1>
+          </div>
+          <div className="flex justify-center pt-8">
+            <button className="text-white flex items-center gap-2 bg-[#BB1B06] py-[12px] px-[64px] font-semibold text-[14px]">
+              Linkedin
+              <GoArrowRight size={19} />
+            </button>
           </div>
         </div>
       </div>
