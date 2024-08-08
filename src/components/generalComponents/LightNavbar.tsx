@@ -7,6 +7,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import NavOne from "../../assets/img/nav1.webp";
 import NavTwo from "../../assets/img/nav2.webp";
 import NavThree from "../../assets/img/nav3.webp";
+import { Link } from "react-router-dom";
 const LightNavbar = () => {
   const [nav, setNav] = useState(false);
   const [industries, setIndustries] = useState(false);
@@ -35,7 +36,7 @@ const LightNavbar = () => {
           nav ? "block" : "hidden"
         } space-x-[20px]`}
       >
-        <div>About</div>
+        <Link to="/about">About</Link>
         <div
           className={`flex items-center ${
             industries ? "border-b-[1.5px] border-white" : ""
