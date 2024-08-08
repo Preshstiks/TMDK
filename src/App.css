@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: MerriBold;
+  src: url(./assets/fonts/MerriweatherSans-Bold.ttf);
+}
+@font-face {
+  font-family: MerriExtraBold;
+  src: url(./assets/fonts/MerriweatherSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: MerriLight;
+  src: url(./assets/fonts/MerriweatherSans-Light.ttf);
+}
+@font-face {
+  font-family: MerriMedium;
+  src: url(./assets/fonts/MerriweatherSans-Medium.ttf);
+}
+@font-face {
+  font-family: MerriRegular;
+  src: url(./assets/fonts/MerriweatherSans-Regular.ttf);
+}
+@font-face {
+  font-family: MerriSemiBold;
+  src: url(./assets/fonts/MerriweatherSans-SemiBold.ttf);
+}
+.bg-news {
+  background-image: url(./assets/img/potatoes.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
