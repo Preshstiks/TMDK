@@ -48,7 +48,7 @@ const LightNavbar = () => {
           </button>
         </div>
         <Link to="/news">News/Media</Link>
-        <div>Career</div>
+        <Link to="/career">Career</Link>
         <div>Contact</div>
       </div>
       <div className="flex items-center space-x-[20px]">

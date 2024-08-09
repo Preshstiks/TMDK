@@ -53,7 +53,7 @@ const Footer = () => {
                 <Link className="pb-3" to="/news">
                   Media
                 </Link>
-                <Link className="pb-2 flex items-center gap-2" to="#">
+                <Link className="pb-2 flex items-center gap-2" to="/career">
                   Careers{" "}
                   <span className="text-[11px] font-MerriMedium p-2 rounded-[6px] border border-white">
                     New
