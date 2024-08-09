@@ -38,7 +38,7 @@ const Footer = () => {
                 Company
               </h1>
               <div className="flex flex-col font-MerriSemiBold text-[#E4E7EC] pt-3">
-                <Link className="pb-3 hover:text-[#98A2B3]" to="#">
+                <Link className="pb-3 hover:text-[#98A2B3]" to="/about">
                   About
                 </Link>
                 <Link className="pb-3 hover:text-[#98A2B3]" to="#">

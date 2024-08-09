@@ -47,7 +47,7 @@ const LightNavbar = () => {
             {industries ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </button>
         </div>
-        <div>News/Media</div>
+        <Link to="/news">News/Media</Link>
         <div>Career</div>
         <div>Contact</div>
       </div>
