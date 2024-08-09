@@ -8,6 +8,8 @@ import News from "./News";
 import Career from "./Career";
 import Contactus from "./Contactus";
 import AgroPark from "./AgroPark";
+import Petrochemical from "./Petrochemical";
+import Infrastructure from "./Infrastructure";
 function App() {
   return (
     <>
@@ -20,6 +22,8 @@ function App() {
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/agropark" element={<AgroPark />} />
+          <Route path="/petrochemical" element={<Petrochemical />} />
+          <Route path="/infrastructure" element={<Infrastructure />} />
         </Routes>
         <Footer />
       </BrowserRouter>
