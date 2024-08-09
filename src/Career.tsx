@@ -22,7 +22,7 @@ const Career = () => {
       </header>
 
       {/* Hiring details */}
-      <div className="px-[7%] py-[80px] space-x-[200px] justify-between flex">
+      <div className="px-[7%] pt-[30px] pb-[80px] space-x-[200px] justify-between flex">
         <div className="w-full">
           <div className="border-t-[1.5px] border-[#E4E7EC] pt-[24px] mb-[24px]">
             <div className="flex gap-4 items-center pb-3">

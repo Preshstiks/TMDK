@@ -49,7 +49,7 @@ const LightNavbar = () => {
         </div>
         <Link to="/news">News/Media</Link>
         <Link to="/career">Career</Link>
-        <div>Contact</div>
+        <Link to="/contact">Contact</Link>
       </div>
       <div className="flex items-center space-x-[20px]">
         <div
