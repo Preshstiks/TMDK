@@ -1,5 +1,6 @@
 import { MdArrowOutward } from "react-icons/md";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 const News = () => {
   return (
     <div>
@@ -239,6 +240,39 @@ const News = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="border-t-[1.5px] mt-[50px] font-MerriSemiBold text-[12px] text-[#475467] flex pt-[20px] justify-between items-center border-[#E4E7EC] w-full">
+          <h1 className="flex items-center gap-2">
+            <GoArrowLeft size={17} />
+            Previous
+          </h1>
+          <div className="font-MerriMedium flex items-center">
+            <div className="h-[35px] w-[35px] flex items-center justify-center rounded-[20px] bg-[#F8F8F8]">
+              1
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              2
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              3
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              ...
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              8
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              9
+            </div>
+            <div className="h-[35px] w-[35px] flex items-center justify-center">
+              10
+            </div>
+          </div>
+          <h1 className="flex items-center gap-2">
+            Next
+            <GoArrowRight size={17} />
+          </h1>
         </div>
       </div>
     </div>
