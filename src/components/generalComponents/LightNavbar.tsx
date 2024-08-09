@@ -42,17 +42,19 @@ const LightNavbar = () => {
           : "bg-white"
       }`}
     >
-      {industries ? (
-        <img src={whiteLogo} alt="logo" />
-      ) : location.pathname === "/agropark" ? (
-        <img src={greenLogo} alt="logo" />
-      ) : location.pathname === "/petrochemical" ? (
-        <img src={orangeLogo} alt="logo" />
-      ) : location.pathname === "/infrastructure" ? (
-        <img src={blueLogo} alt="logo" />
-      ) : (
-        <img src={Logo} alt="logo" />
-      )}
+      <Link to="/">
+        {industries ? (
+          <img src={whiteLogo} alt="logo" />
+        ) : location.pathname === "/agropark" ? (
+          <img src={greenLogo} alt="logo" />
+        ) : location.pathname === "/petrochemical" ? (
+          <img src={orangeLogo} alt="logo" />
+        ) : location.pathname === "/infrastructure" ? (
+          <img src={blueLogo} alt="logo" />
+        ) : (
+          <img src={Logo} alt="logo" />
+        )}
+      </Link>
       <div
         className={`flex ${
           industries
@@ -71,7 +73,13 @@ const LightNavbar = () => {
         <Link to="/about">About</Link>
         <div
           className={`flex items-center ${
-            industries ? "border-b-[1.5px] border-[#E6712D] text-[#E6712D]" : ""
+            industries
+              ? location.pathname !== "/petrochemical"
+                ? "border-b-[1.5px] border-white text-white"
+                : "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
+              : location.pathname !== "/petrochemical"
+              ? "text-[#141C21]"
+              : "text-white"
           } gap-2`}
         >
           Industries
