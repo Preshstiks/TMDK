@@ -11,10 +11,34 @@ import NavOne from "../../assets/img/nav1.webp";
 import NavTwo from "../../assets/img/nav2.webp";
 import NavThree from "../../assets/img/nav3.webp";
 import { Link, useLocation } from "react-router-dom";
+import otherOne from "../../assets/img/otheragro.webp";
+import otherTwo from "../../assets/img/otherpetro.webp";
+import otherThree from "../../assets/img/otherinfra.webp";
 const LightNavbar = () => {
   const [nav, setNav] = useState(false);
   const [industries, setIndustries] = useState(false);
-  const [route, setRoute] = useState("");
+  const [navOneHover, setNavOneHover] = useState(false);
+  const [navTwoHover, setNavTwoHover] = useState(false);
+  const [navThreeHover, setNavThreeHover] = useState(false);
+
+  const handleNavOneMouseEnter = () => {
+    setNavOneHover(true);
+  };
+  const handleNavTwoMouseEnter = () => {
+    setNavTwoHover(true);
+  };
+  const handleNavThreeMouseEnter = () => {
+    setNavThreeHover(true);
+  };
+  const handleNavOneMouseLeave = () => {
+    setNavOneHover(false);
+  };
+  const handleNavTwoMouseLeave = () => {
+    setNavTwoHover(false);
+  };
+  const handleNavThreeMouseLeave = () => {
+    setNavThreeHover(false);
+  };
   const toggleNav = () => {
     setNav(!nav);
     setIndustries(false);
@@ -31,11 +55,11 @@ const LightNavbar = () => {
       } py-5 relative px-[5%] ${
         industries
           ? location.pathname === "/agropark"
-            ? "bg-[#D2EB75]"
+            ? "bg-[#131B1F]"
             : location.pathname === "/petrochemical"
             ? "bg-[#141C21]"
             : location.pathname === "/infrastructure"
-            ? "bg-[#08529D]"
+            ? "bg-[#1C1C1C]"
             : "bg-[#BB1B06]"
           : location.pathname === "/petrochemical"
           ? "bg-[#141C21]"
@@ -58,11 +82,7 @@ const LightNavbar = () => {
       <div
         className={`flex ${
           industries
-            ? location.pathname === "/agropark"
-              ? "text-[#182F2A]"
-              : location.pathname === "/petrochemical"
-              ? "text-white"
-              : "text-white"
+            ? "text-white"
             : location.pathname === "/petrochemical"
             ? "text-white"
             : "text-[#141C21]"
@@ -74,9 +94,13 @@ const LightNavbar = () => {
         <div
           className={`flex items-center ${
             industries
-              ? location.pathname !== "/petrochemical"
+              ? location.pathname === "/"
                 ? "border-b-[1.5px] border-white text-white"
-                : "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
+                : location.pathname === "/agropark"
+                ? "border-b-[1.5px] border-[#D2EB75] text-[#D2EB75]"
+                : location.pathname === "/petrochemical"
+                ? "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
+                : " border-b-[1.5px] border-[#08529D] text-[#08529D]"
               : location.pathname !== "/petrochemical"
               ? "text-[#141C21]"
               : "text-white"
@@ -137,85 +161,11 @@ const LightNavbar = () => {
         </button>
       </div>
       {industries &&
-        (location.pathname === "/petrochemical" ? (
-          <div className="bg-[#141C21] flex flex-col items-center border-t-[1.5px] border-white absolute left-0 right-0 z-40 top-[110px]">
-            <div>
-              <h1 className="text-white px-[12px] py-8 font-MerriSemiBold text-[14px]">
-                Our subsidiary companies
-              </h1>
-              <div className="flex">
-                <Link to="agropark" onClick={() => setIndustries(false)}>
-                  <div className="flex hover:bg-white p-[12px] rounded-[8px] items-center gap-6 mb-4">
-                    <img
-                      src={NavOne}
-                      className="w-[144px] h-[88px] rounded-md"
-                      alt="img1"
-                    />
-                    <div>
-                      <h1 className="font-MerriSemiBold text-white">
-                        Agro Park
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        Jump right in — get an overview
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        of the basics and fundamenta...
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-                <Link to="petrochemical" onClick={() => setIndustries(false)}>
-                  <div className="flex hover:bg-white p-[12px] rounded-[8px] items-center gap-6 mb-4">
-                    <img
-                      src={NavTwo}
-                      className="w-[144px] h-[88px] rounded-md"
-                      alt="img2"
-                    />
-                    <div>
-                      <h1 className="font-MerriSemiBold text-white">
-                        Petrochemicals
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        The latest best practices and tips
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        from the best in the industry. Le...
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-                <Link to="infrastructure" onClick={() => setIndustries(false)}>
-                  <div className="flex hover:bg-white p-[12px] rounded-[8px] items-center gap-6 mb-4">
-                    <img
-                      src={NavThree}
-                      className="w-[144px] h-[88px] rounded-md"
-                      alt="img3"
-                    />
-                    <div>
-                      <h1 className="font-MerriSemiBold text-white">
-                        Infrastructure
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        Synthesis is the mysterious rabbit
-                      </h1>
-                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
-                        hole that all data scientists hav...
-                      </h1>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        ) : (
+        (location.pathname === "/" ? (
           <div
-            className={`w-full ${
-              location.pathname === "/agropark"
-                ? "bg-[#D2EB75]"
-                : location.pathname === "/infrastructure"
-                ? "bg-[#08529D]"
-                : "bg-[#BB1B06]"
-            } flex justify-center border-t-[1.5px] border-white absolute left-0 right-0 z-40 top-[110px]`}
+            className="w-full 
+                bg-[#BB1B06]
+            } flex justify-center border-t-[1.5px] border-white absolute left-0 right-0 z-40 top-[110px]"
           >
             <div>
               <h1 className="text-white px-[12px] py-8 font-MerriSemiBold text-[14px]">
@@ -279,6 +229,160 @@ const LightNavbar = () => {
                   </div>
                 </div>
               </Link>
+            </div>
+          </div>
+        ) : (
+          <div
+            className={`w-full ${
+              location.pathname === "/agropark"
+                ? "bg-[#131B1F]"
+                : location.pathname === "/infrastructure"
+                ? "bg-[#1C1C1C]"
+                : "bg-[#141C21]"
+            } flex justify-center border-t-[1.5px] border-white absolute left-0 right-0 z-40 top-[110px]`}
+          >
+            <div>
+              <h1
+                className={`text-white px-[12px] py-8 font-MerriSemiBold text-[14px] ${
+                  location.pathname === "/"
+                    ? "text-white"
+                    : location.pathname === "/agropark"
+                    ? "text-[#D2EB75]"
+                    : location.pathname === "/petrochemical"
+                    ? " text-[#e0702f]"
+                    : "text-[#08529D]"
+                }`}
+              >
+                Our subsidiary companies
+              </h1>
+              <div className="flex gap-[60px]">
+                <Link to="agropark" onClick={() => setIndustries(false)}>
+                  <div
+                    onMouseEnter={handleNavOneMouseEnter}
+                    onMouseLeave={handleNavOneMouseLeave}
+                    className="hover:bg-white p-[12px] rounded-[8px] gap-6 mb-4"
+                  >
+                    {navOneHover ? (
+                      <img
+                        src={NavOne}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img1"
+                      />
+                    ) : (
+                      <img
+                        src={otherOne}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img1"
+                      />
+                    )}
+                    <div>
+                      <h1
+                        className={`font-MerriSemiBold pt-3 text-white ${
+                          location.pathname === "/"
+                            ? "text-white"
+                            : location.pathname === "/agropark"
+                            ? "text-[#D2EB75]"
+                            : location.pathname === "/petrochemical"
+                            ? " text-[#e0702f]"
+                            : "text-[#08529D]"
+                        }`}
+                      >
+                        Agro Park
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        Jump right in — get an overview
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        of the basics and fundamenta...
+                      </h1>
+                    </div>
+                  </div>
+                </Link>
+                <Link to="petrochemical" onClick={() => setIndustries(false)}>
+                  <div
+                    onMouseEnter={handleNavTwoMouseEnter}
+                    onMouseLeave={handleNavTwoMouseLeave}
+                    className=" hover:bg-white p-[12px] rounded-[8px] gap-6 mb-4"
+                  >
+                    {navTwoHover ? (
+                      <img
+                        src={NavOne}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img1"
+                      />
+                    ) : (
+                      <img
+                        src={otherTwo}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img2"
+                      />
+                    )}
+                    <div>
+                      <h1
+                        className={`font-MerriSemiBold pt-3 text-white ${
+                          location.pathname === "/"
+                            ? "text-white"
+                            : location.pathname === "/agropark"
+                            ? "text-[#D2EB75]"
+                            : location.pathname === "/petrochemical"
+                            ? " text-[#e0702f]"
+                            : "text-[#08529D]"
+                        }`}
+                      >
+                        Petrochemicals
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        The latest best practices and tips
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        from the best in the industry. Le...
+                      </h1>
+                    </div>
+                  </div>
+                </Link>
+                <Link to="infrastructure" onClick={() => setIndustries(false)}>
+                  <div
+                    onMouseEnter={handleNavThreeMouseEnter}
+                    onMouseLeave={handleNavThreeMouseLeave}
+                    className="hover:bg-white p-[12px] rounded-[8px] gap-6 mb-4"
+                  >
+                    {navThreeHover ? (
+                      <img
+                        src={NavOne}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img1"
+                      />
+                    ) : (
+                      <img
+                        src={otherThree}
+                        className="w-[200px] h-[120px] rounded-md"
+                        alt="img3"
+                      />
+                    )}
+                    <div>
+                      <h1
+                        className={`font-MerriSemiBold pt-3 text-white ${
+                          location.pathname === "/"
+                            ? "text-white"
+                            : location.pathname === "/agropark"
+                            ? "text-[#D2EB75]"
+                            : location.pathname === "/petrochemical"
+                            ? " text-[#e0702f]"
+                            : "text-[#08529D]"
+                        }`}
+                      >
+                        Infrastructure
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        Synthesis is the mysterious rabbit
+                      </h1>
+                      <h1 className="text-[#D0D5DD] font-MerriRegular text-[14px]">
+                        hole that all data scientists hav...
+                      </h1>
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         ))}

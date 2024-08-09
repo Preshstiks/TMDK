@@ -1,5 +1,6 @@
 import bg from "./assets/img/infrabg.webp";
 import bgimg from "./assets/img/img.webp";
+import { GoArrowRight } from "react-icons/go";
 const Infrastructure = () => {
   return (
     <div>
@@ -20,6 +21,43 @@ const Infrastructure = () => {
           </h1>
         </div>
       </header>
+
+      {/* about us */}
+      <div className="bg-[#F8F8F8] p-[80px] flex justify-between">
+        <div className="">
+          <h1 className="text-[14px] font-MerriSemiBold text-[#0461BD]">
+            About us
+          </h1>
+          <h1 className="text-[#131D2C] text-[48px] pt-[10px] font-MerriSemiBold">
+            TMDK
+          </h1>
+          <h1 className="text-[#131D2C] text-[48px] font-MerriSemiBold">
+            Infrastructure
+          </h1>
+        </div>
+        <div>
+          <h1 className="text-[#131D2C] font-MerriRegular text-[17px]">
+            Focused on developing affordable, high-quality structures,
+          </h1>
+          <h1 className="text-[#131D2C] font-MerriRegular text-[17px]">
+            TMDK Infrastructure is making its mark in the construction
+          </h1>
+          <h1 className="text-[#131D2C] font-MerriRegular text-[17px]">
+            landscape. We also cater to the diverse needs of Commercial
+          </h1>
+          <h1 className="text-[#131D2C] font-MerriRegular text-[17px]">
+            Real Estate, creating vibrant communities that combine
+          </h1>
+          <h1 className="text-[#131D2C] font-MerriRegular text-[17px]">
+            comfort, functionality, and modern design.
+          </h1>
+
+          <button className="text-[14px] shadow-sm hover:text-[#182736] border hover:border-[#D1D1D6] hover:bg-white mt-[60px] flex items-center gap-3 py-[12px] px-[18px] text-white font-MerriRegular bg-[#0461BD]">
+            Download Brochure
+            <GoArrowRight size={19} className="hover:text-white" />
+          </button>
+        </div>
+      </div>
 
       {/*What we do*/}
       <div className="bg-[#1C1C1C] py-[80px] px-[7%]">
