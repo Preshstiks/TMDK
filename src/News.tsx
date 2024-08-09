@@ -97,10 +97,10 @@ const News = () => {
                   Dedicated to sustained growth
                 </h1>
                 <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
+                  Linear helps streamline software projects, sprints,
                 </h1>
                 <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
+                  tasks, and bug tracking. Here’s how to get started.
                 </h1>
                 <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
                   Read Post
@@ -115,66 +115,10 @@ const News = () => {
                   Dedicated to sustained growth
                 </h1>
                 <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
+                  The rise of RESTful APIs has been met by a rise in
                 </h1>
                 <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
-                </h1>
-                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
-                  Read Post
-                  <MdArrowOutward />
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-between pt-[40px]">
-            <div>
-              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
-              <div className="pt-5">
-                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
-                  Dedicated to sustained growth
-                </h1>
-                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
-                </h1>
-                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
-                </h1>
-                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
-                  Read Post
-                  <MdArrowOutward />
-                </h1>
-              </div>
-            </div>
-            <div>
-              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
-              <div className="pt-5">
-                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
-                  Dedicated to sustained growth
-                </h1>
-                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
-                </h1>
-                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
-                </h1>
-                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
-                  Read Post
-                  <MdArrowOutward />
-                </h1>
-              </div>
-            </div>
-            <div>
-              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
-              <div className="pt-5">
-                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
-                  Dedicated to sustained growth
-                </h1>
-                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
-                </h1>
-                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
+                  tools for creating, testing, and managing them.
                 </h1>
                 <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
                   Read Post
@@ -191,10 +135,10 @@ const News = () => {
                   Dedicated to sustained growth
                 </h1>
                 <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
+                  Like to know the secrets of transforming a 2-14
                 </h1>
                 <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
+                  team into a 3x Super Bowl winning Dynasty?
                 </h1>
                 <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
                   Read Post
@@ -209,10 +153,10 @@ const News = () => {
                   Dedicated to sustained growth
                 </h1>
                 <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
+                  Mental models are simple expressions of complex
                 </h1>
                 <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
+                  processes or relationships.
                 </h1>
                 <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
                   Read Post
@@ -227,10 +171,66 @@ const News = () => {
                   Dedicated to sustained growth
                 </h1>
                 <h1 className="text-[#475467] text-[14px] font-MerriRegular">
-                  How do you create compelling presentations that
+                  Introduction to Wireframing and its Principles
                 </h1>
                 <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
-                  wow your colleagues and impress your managers?
+                  Learn from the best in the industry.
+                </h1>
+                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
+                  Read Post
+                  <MdArrowOutward />
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between pt-[40px]">
+            <div>
+              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
+                  Dedicated to sustained growth
+                </h1>
+                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
+                  Collaboration can make our teams stronger, and
+                </h1>
+                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
+                  our individual designs better.
+                </h1>
+                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
+                  Read Post
+                  <MdArrowOutward />
+                </h1>
+              </div>
+            </div>
+            <div>
+              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
+                  Dedicated to sustained growth
+                </h1>
+                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
+                  JavaScript frameworks make development easy
+                </h1>
+                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
+                  with extensive features and functionalities
+                </h1>
+                <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
+                  Read Post
+                  <MdArrowOutward />
+                </h1>
+              </div>
+            </div>
+            <div>
+              <div className="w-[340px] h-[250px] bg-[#F8F8F8]"></div>
+              <div className="pt-5">
+                <h1 className="text-[#101828] text-[20px] pb-2 font-MerriSemiBold">
+                  Dedicated to sustained growth
+                </h1>
+                <h1 className="text-[#475467] text-[14px] font-MerriRegular">
+                  Starting a community doesn’t need to be
+                </h1>
+                <h1 className="text-[#475467] text-[14px] pb-3 font-MerriRegular">
+                  complicated, but how do you get started?
                 </h1>
                 <h1 className="text-[#BB1B06] flex items-center gap-2 text-[13px] font-MerriBold">
                   Read Post
