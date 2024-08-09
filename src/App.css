@@ -30,3 +30,45 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* App.css */
+.custom-arrow {
+  background-color: #dee171;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure arrows are above other elements */
+}
+
+.custom-arrow.prev {
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+}
+
+.custom-arrow.next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.slide-item {
+  text-align: center;
+  padding: 40px;
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+}
+
+.slider-container {
+  position: relative;
+  position: relative;
+  width: 100%;
+  margin: auto;
+}

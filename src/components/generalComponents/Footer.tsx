@@ -1,37 +1,63 @@
 import { BsFacebook, BsLinkedin, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import footerLogo from "../../assets/img/footerlogo.webp";
+import greenFooterLogo from "../../assets/img/greenFooterLogo.webp";
+import blueFooterLogo from "../../assets/img/blueFooterLogo.webp";
+import orangeFooterLogo from "../../assets/img/orangeFooterLogo.webp";
 const Footer = () => {
+  const location = useLocation();
   return (
     <footer>
       <div className="flex">
         <div className="w-[25%]">
           <div className="p-[64px]">
-            <img src={footerLogo} alt="logo" />
+            {location.pathname === "/agropark" ? (
+              <img src={greenFooterLogo} alt="logo" />
+            ) : location.pathname === "/petrochemical" ? (
+              <img src={orangeFooterLogo} alt="logo" />
+            ) : location.pathname === "/infrastructure" ? (
+              <img src={blueFooterLogo} alt="logo" />
+            ) : (
+              <img src={footerLogo} alt="logo" />
+            )}
           </div>
-          <div className="bg-[#BC1B06] p-[64px] h-[250px] flex items-end">
-            <div className="flex items-center gap-[24px]">
-              <BsTwitterX
-                size={22}
-                className="text-white hover:text-[#98A2B3]"
-              />
-              <BsLinkedin
-                size={22}
-                className="text-white hover:text-[#98A2B3]"
-              />
-              <BsFacebook
-                size={22}
-                className="text-white hover:text-[#98A2B3]"
-              />
-              <BsYoutube
-                size={22}
-                className="text-white hover:text-[#98A2B3]"
-              />
+          <div
+            className={`${
+              location.pathname === "/agropark"
+                ? "bg-[#D2EB75]"
+                : location.pathname === "/petrochemical"
+                ? "bg-[#E6712D]"
+                : location.pathname === "/infrastructure"
+                ? "bg-[#08529D]"
+                : "bg-[#BB1B06]"
+            } p-[64px] h-[250px] flex items-end`}
+          >
+            <div
+              className={`flex items-center gap-[24px] ${
+                location.pathname === "/agropark"
+                  ? "text-[#182F2A]"
+                  : "text-white"
+              }`}
+            >
+              <BsTwitterX size={22} className="hover:text-[#98A2B3]" />
+              <BsLinkedin size={22} className="hover:text-[#98A2B3]" />
+              <BsFacebook size={22} className="hover:text-[#98A2B3]" />
+              <BsYoutube size={22} className="hover:text-[#98A2B3]" />
             </div>
           </div>
         </div>
-        <div className="bg-[#182736] relative w-[75%] ">
+        <div
+          className={`relative w-[75%] ${
+            location.pathname === "/agropark"
+              ? "bg-[#182F2A]"
+              : location.pathname === "/petrochemical"
+              ? "bg-[#141C21]"
+              : location.pathname === "/infrastructure"
+              ? "bg-[#1C1C1C]"
+              : "bg-[#182736]"
+          }`}
+        >
           <div className=" flex justify-between p-[64px]">
             <div>
               <h1 className="text-[#D0D5DD] font-MerriSemiBold text-[14px]">
@@ -136,7 +162,17 @@ const Footer = () => {
                     <span className="text-[#BC1B06] text-[16px]">*</span>
                     Mandatory Fields
                   </div>
-                  <button className="text-white flex items-center gap-2 bg-[#BC1B06] font-semibold py-[12px] px-[18px]">
+                  <button
+                    className={`text-white flex items-center gap-2 ${
+                      location.pathname === "/agropark"
+                        ? "bg-[#D2EB75] text-[#182F2A]"
+                        : location.pathname === "/petrochemical"
+                        ? "bg-[#E6712D] text-[#182F2A]"
+                        : location.pathname === "/infrastructure"
+                        ? "bg-[#08529D]"
+                        : "bg-[#BB1B06]"
+                    } font-semibold py-[12px] px-[18px]`}
+                  >
                     Get started
                     <MdArrowOutward size={20} />
                   </button>

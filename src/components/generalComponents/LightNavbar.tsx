@@ -51,7 +51,13 @@ const LightNavbar = () => {
       )}
       <div
         className={`flex ${
-          industries ? "text-white" : "text-[#182736]"
+          industries
+            ? location.pathname === "/agropark"
+              ? "text-[#182F2A]"
+              : location.pathname === "/petrochemical"
+              ? "text-[#182F2A]"
+              : "text-white"
+            : "text-[#101828]"
         } text-[17px] font-MerriRegular items-center ${
           nav ? "block" : "hidden"
         } space-x-[20px]`}
@@ -90,10 +96,29 @@ const LightNavbar = () => {
           {nav ? (
             <IoClose
               size={23}
-              className={industries ? "text-white" : "text-[#BB1B06]"}
+              className={
+                location.pathname === "/agropark"
+                  ? "text-[#182F2A]"
+                  : location.pathname === "/petrochemical"
+                  ? "text-[#E6712D]"
+                  : location.pathname === "/infrastructure"
+                  ? "text-[#182F2A]"
+                  : "text-[#BB1B06]"
+              }
             />
           ) : (
-            <FiMenu size={23} className="text-[#BB1B06]" />
+            <FiMenu
+              size={23}
+              className={
+                location.pathname === "/agropark"
+                  ? "text-[#182F2A]"
+                  : location.pathname === "/petrochemical"
+                  ? "text-[#E6712D]"
+                  : location.pathname === "/infrastructure"
+                  ? "text-[#182F2A]"
+                  : "text-[#BB1B06]"
+              }
+            />
           )}
         </button>
       </div>

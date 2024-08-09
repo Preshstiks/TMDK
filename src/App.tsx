@@ -7,7 +7,7 @@ import Footer from "./components/generalComponents/Footer";
 import News from "./News";
 import Career from "./Career";
 import Contactus from "./Contactus";
-import AgroPark from "./assets/AgroPark";
+import AgroPark from "./AgroPark";
 function App() {
   return (
     <>

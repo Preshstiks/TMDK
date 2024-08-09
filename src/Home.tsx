@@ -16,13 +16,13 @@ const Home = () => {
     <div>
       <header className="bg-[#182736] h-[90vh] px-[5%] pb-[80px] relative flex items-end">
         <div>
-          <h1 className="font-MerriBold leading-[60px] text-[48px] text-white">
+          <h1 className="font-MerriBold leading-[60px] text-[40px] text-white">
             Powering Growth Through
           </h1>
-          <h1 className="font-MerriBold leading-[60px] text-[48px] text-white">
+          <h1 className="font-MerriBold leading-[60px] text-[40px] text-white">
             Integrated Services
           </h1>
-          <h1 className="text-[20px] leading-[30px] pt-4 font-MerriLight text-[#818E98]">
+          <h1 className="text-[17px] leading-[30px] pt-4 font-MerriLight text-[#818E98]">
             Together we create a better and more sustainable future.
           </h1>
         </div>
