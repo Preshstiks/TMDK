@@ -7,6 +7,7 @@ import Footer from "./components/generalComponents/Footer";
 import News from "./News";
 import Career from "./Career";
 import Contactus from "./Contactus";
+import AgroPark from "./assets/AgroPark";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contactus />} />
+          <Route path="/agropark" element={<AgroPark />} />
         </Routes>
         <Footer />
       </BrowserRouter>
