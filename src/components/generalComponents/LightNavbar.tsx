@@ -14,6 +14,8 @@ import { Link, useLocation } from "react-router-dom";
 import otherOne from "../../assets/img/otheragro.webp";
 import otherTwo from "../../assets/img/otherpetro.webp";
 import otherThree from "../../assets/img/otherinfra.webp";
+import AgroDark from "../../assets/img/agrodark.webp";
+import InfraDark from "../../assets/img/infradark.webp";
 const LightNavbar = () => {
   const [nav, setNav] = useState(false);
   const [industries, setIndustries] = useState(false);
@@ -68,7 +70,13 @@ const LightNavbar = () => {
     >
       <Link to="/" onClick={() => setIndustries(false)}>
         {industries ? (
-          <img src={whiteLogo} alt="logo" />
+          location.pathname === "/agropark" ? (
+            <img src={AgroDark} alt="logo" />
+          ) : location.pathname === "/infrastructure" ? (
+            <img src={InfraDark} alt="logo" />
+          ) : (
+            <img src={whiteLogo} alt="logo" />
+          )
         ) : location.pathname === "/agropark" ? (
           <img src={greenLogo} alt="logo" />
         ) : location.pathname === "/petrochemical" ? (
