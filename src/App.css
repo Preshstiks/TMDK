@@ -72,3 +72,26 @@
   width: 100%;
   margin: auto;
 }
+
+.heading {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.group:hover .heading {
+  transform: translateY(-30px); /* Move upwards */
+  opacity: 0; /* Fade out */
+}
+
+.zoom-in {
+  transform: scale(1.05); /* Scale up slightly for visual zoom */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.group:hover .zoom-in {
+  transform: scale(1.05); /* Apply zoom effect on hover */
+}
+
+.group:hover .heading-text {
+  transform: translateY(-30px); /* Move upwards */
+  opacity: 0; /* Fade out */
+}

@@ -9,7 +9,7 @@ import bgtwo from "./assets/img/mobil.webp";
 import bgthree from "./assets/img/bgthree.webp";
 import Icon from "./assets/img/Logomark.png";
 import { HiMiniPlayCircle } from "react-icons/hi2";
-import footerLogo from "./assets/img/footerlogo.webp";
+import { MdArrowOutward } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -64,42 +64,66 @@ const Home = () => {
       {/* Industries */}
       <div className="flex relative w-full">
         <div className="h-[75vh] bg-white px-[80px] w-full">
-          <h1 className="text-[#BB1B06] pt-[80px] text-[24px] font-MerriBold">
+          <h1 className="text-[#BB1B06] pt-[80px] text-[24px] font-MerriBold heading">
             Our Industries
           </h1>
         </div>
         <div className="h-[75vh] bg-[#182736] pr-[80px] w-full"></div>
         <div className="absolute top-[150px] right-0 left-0 bottom-0">
           <div className="flex justify-center gap-3">
-            <div className="relative w-[368px] h-[398px]">
-              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold">
+            <div className="relative w-[368px] h-[398px] group">
+              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold heading-text transition-transform duration-500 ease-out group-hover:translate-y-[-100%] group-hover:opacity-0">
                 Agro Park
               </div>
               <img
                 src={Agro}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 alt="agro"
               />
+              <div className="absolute bottom-0 left-0 right-0 h-0 opacity-0 bg-[#BB1B06] transition-all duration-300 group-hover:h-[180px] group-hover:opacity-100 p-8 font-MerriRegular text-[12px] text-white">
+                <h1>We provide comprehensive infrastructure</h1>
+                <h1>for agro-industrial operations, </h1>
+                <h1>collaborating with local farmers to create </h1>
+                <h1>job opportunities and boost agricultural </h1>
+                <h1>productivity.</h1>
+                <MdArrowOutward size={17} className="mt-4" />
+              </div>
             </div>
-            <div className="relative w-[368px] h-[398px]">
-              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold">
+            <div className="relative w-[368px] h-[398px] group">
+              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold heading-text transition-transform duration-500 ease-out group-hover:translate-y-[-100%] group-hover:opacity-0">
                 Petrochemicals
               </div>
               <img
-                src={Infrastructure}
-                className="w-full h-full object-cover"
+                src={PetroChemical}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 alt="infrastructure"
               />
+              <div className="absolute bottom-0 left-0 right-0 h-0 opacity-0 bg-[#BB1B06] transition-all duration-300 group-hover:h-[180px] group-hover:opacity-100 p-8 font-MerriRegular text-[12px] text-white">
+                <h1>Our efficient operations include receiving</h1>
+                <h1>vessels, storing petroleum products, and</h1>
+                <h1>distributing them via reliable trucking </h1>
+                <h1>services, thereby contributing to the</h1>
+                <h1>nation's energy security.</h1>
+                <MdArrowOutward size={17} className="mt-4" />
+              </div>
             </div>
-            <div className="relative w-[368px] h-[398px]">
-              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold">
+            <div className="relative w-[368px] h-[398px] group">
+              <div className="absolute top-6 left-6 text-[#182736] text-[24px] font-MerriSemiBold heading-text transition-transform duration-500 ease-out group-hover:translate-y-[-100%] group-hover:opacity-0">
                 Infrastructure
               </div>
               <img
-                src={PetroChemical}
-                className="w-full h-full object-cover"
+                src={Infrastructure}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 alt="petrochemical"
               />
+              <div className="absolute bottom-0 left-0 right-0 h-0 opacity-0 bg-[#BB1B06] transition-all duration-300 group-hover:h-[180px] group-hover:opacity-100 p-8 font-MerriRegular text-[12px] text-white">
+                <h1>We provide comprehensive infrastructure</h1>
+                <h1>for agro-industrial operations, </h1>
+                <h1>collaborating with local farmers to create </h1>
+                <h1>job opportunities and boost agricultural </h1>
+                <h1>productivity.</h1>
+                <MdArrowOutward size={17} className="mt-4" />
+              </div>
             </div>
           </div>
         </div>
@@ -111,13 +135,13 @@ const Home = () => {
           <h1 className="text-[#182736] text-[24px] font-MerriSemiBold">
             Recent News
           </h1>
-          <button className="flex items-center gap-2 text-[14px] font-MerriRegular text-[#BB1B06] border-[1.5px] border-[#182736] py-[12px] px-[18px]">
+          <button className="flex items-center gap-2 text-[14px] font-MerriRegular text-[#BB1B06] border-[1.5px] border-[#182736] hover:transition-all hover:text-[#182736] py-[12px] px-[18px]">
             View all news <GoArrowRight size={20} />
           </button>
         </div>
         <div>
           <div className="flex items-center justify-between">
-            <div className="relative w-[592px] h-[458px]">
+            <div className="relative max-w-[592px] w-full h-[458px]">
               <div
                 className="absolute flex items-end inset-0 bg-news bg-cover bg-center"
                 style={{

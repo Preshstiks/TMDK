@@ -66,7 +66,7 @@ const LightNavbar = () => {
           : "bg-white"
       }`}
     >
-      <Link to="/">
+      <Link to="/" onClick={() => setIndustries(false)}>
         {industries ? (
           <img src={whiteLogo} alt="logo" />
         ) : location.pathname === "/agropark" ? (
