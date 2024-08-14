@@ -8,10 +8,10 @@ import orangeFooterLogo from "../../assets/img/orangeFooterLogo.webp";
 const Footer = () => {
   const location = useLocation();
   return (
-    <footer>
-      <div className="flex">
-        <div className="w-[25%]">
-          <div className="p-[64px]">
+    <footer className="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-[25%]">
+          <div className="py-8 lg:py-[64px] flex justify-center lg:justify-start">
             {location.pathname === "/agropark" ? (
               <img src={greenFooterLogo} alt="logo" />
             ) : location.pathname === "/petrochemical" ? (
@@ -31,10 +31,10 @@ const Footer = () => {
                 : location.pathname === "/infrastructure"
                 ? "bg-[#08529D]"
                 : "bg-[#BB1B06]"
-            } p-[64px] h-[250px] flex items-end`}
+            } py-8 lg:py-[64px] px-4 h-[300px] flex items-end`}
           >
             <div
-              className={`flex items-center gap-[24px] ${
+              className={`flex items-center justify-center lg:justify-start gap-4 lg:gap-6 ${
                 location.pathname === "/agropark"
                   ? "text-[#182F2A]"
                   : "text-white"
@@ -47,8 +47,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {/* Footer Links and Contact Form */}
         <div
-          className={`relative w-[75%] ${
+          className={`w-full lg:w-[75%] ${
             location.pathname === "/agropark"
               ? "bg-[#182F2A]"
               : location.pathname === "/petrochemical"
@@ -58,108 +59,112 @@ const Footer = () => {
               : "bg-[#182736]"
           }`}
         >
-          <div className=" flex justify-between p-[64px]">
-            <div>
-              <h1 className="text-[#D0D5DD] font-MerriSemiBold text-[14px]">
+          <div className="flex flex-col lg:flex-row justify-between p-6 lg:p-[64px]">
+            <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
+              <h1 className="text-[#D0D5DD] font-MerriSemiBold text-[16px] lg:text-[14px]">
                 Company
               </h1>
               <div className="flex flex-col font-MerriSemiBold text-[#E4E7EC] pt-3">
-                <Link className="pb-3 hover:text-[#98A2B3]" to="/about">
+                <Link className="pb-2 hover:text-[#98A2B3]" to="/about">
                   About
                 </Link>
-                <Link className="pb-3 hover:text-[#98A2B3]" to="#">
+                <Link className="pb-2 hover:text-[#98A2B3]" to="#">
                   Agro Park
                 </Link>
-                <Link className="pb-3 hover:text-[#98A2B3]" to="#">
+                <Link className="pb-2 hover:text-[#98A2B3]" to="#">
                   Petrochemical
                 </Link>
-                <Link className="pb-3 hover:text-[#98A2B3]" to="#">
+                <Link className="pb-2 hover:text-[#98A2B3]" to="#">
                   Infrastructure
                 </Link>
-                <Link className="pb-3" to="/news">
+                <Link className="pb-2 hover:text-[#98A2B3]" to="/news">
                   Media
                 </Link>
                 <Link className="pb-2 flex items-center gap-2" to="/career">
                   Careers{" "}
-                  <span className="text-[11px] font-MerriMedium p-2 rounded-[6px] border border-white">
+                  <span className="text-[10px] lg:text-[11px] font-MerriMedium p-1 lg:p-2 rounded-[4px] border border-white">
                     New
                   </span>
                 </Link>
               </div>
             </div>
-            <div>
-              <h1 className="text-[#D0D5DD] font-MerriSemiBold text-[14px]">
+            <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
+              <h1 className="text-[#D0D5DD] font-MerriSemiBold text-[16px] lg:text-[14px]">
                 Contact
               </h1>
               <div className="flex flex-col font-MerriSemiBold text-[#E4E7EC] pt-3">
-                <div className="pb-3 hover:text-[#98A2B3] cursor-pointer">
+                <div className="pb-2 hover:text-[#98A2B3] cursor-pointer">
                   Email:
                 </div>
-                <div className="pb-3 hover:text-[#98A2B3] cursor-pointer">
+                <div className="pb-2 hover:text-[#98A2B3] cursor-pointer">
                   info@tmdkgroup.com
                 </div>
-                <div className="pb-3 hover:text-[#98A2B3] cursor-pointer">
+                <div className="pb-2 hover:text-[#98A2B3] cursor-pointer">
                   Phone:
                 </div>
-                <div className="pb-3 hover:text-[#98A2B3] cursor-pointer">
+                <div className="pb-2 hover:text-[#98A2B3] cursor-pointer">
                   +234 900 000 0000
                 </div>
-                <div className="pb-3 hover:text-[#98A2B3] cursor-pointer">
+                <div className="pb-2 hover:text-[#98A2B3] cursor-pointer">
                   Head Office
                 </div>
                 <div className="hover:text-[#98A2B3] cursor-pointer">
                   <div>100 Smith Street</div>
-                  <div className="pb-3">Collingwood VIC 3066 AU</div>
+                  <div className="pb-2">Collingwood VIC 3066 AU</div>
                 </div>
               </div>
             </div>
-            <div>
-              <h1 className="font-bold text-[#FFFFFF]">Contact</h1>
-              <h1 className="text-[#98A2B3] font-normal py-8">
+            <div className="w-full lg:w-1/3">
+              <h1 className="text-[#FFFFFF] font-bold text-[16px] lg:text-[18px]">
+                Contact
+              </h1>
+              <h1 className="text-[#98A2B3] font-normal py-4 lg:py-8 text-[14px] lg:text-[16px]">
                 Fill out the form below and we will get in touch shortly.
               </h1>
               <form>
-                <div className="flex justify-between pb-5 space-x-4">
-                  <div className="w-full">
-                    <label className="text-[14px] text-white">
+                <div className="flex flex-col lg:flex-row lg:space-x-4 pb-5">
+                  <div className="w-full mb-4 lg:mb-0">
+                    <label className="text-[12px] lg:text-[14px] text-white">
                       First name
-                      <span className="text-[#BC1B06] text-[16px]">*</span>
+                      <span className="text-[#BC1B06] text-[14px] lg:text-[16px]">
+                        *
+                      </span>
                     </label>
-                    <div>
-                      <input
-                        type="text"
-                        className="border-b pt-2 text-white text-[12px] w-full outline-none bg-transparent border-white"
-                      />
-                    </div>
+                    <input
+                      type="text"
+                      className="border-b pt-2 text-white text-[12px] w-full outline-none bg-transparent border-white"
+                    />
                   </div>
                   <div className="w-full">
-                    <label className="text-[14px] text-white">
+                    <label className="text-[12px] lg:text-[14px] text-white">
                       Email
-                      <span className="text-[#BC1B06] text-[16px]">*</span>
+                      <span className="text-[#BC1B06] text-[14px] lg:text-[16px]">
+                        *
+                      </span>
                     </label>
-                    <div>
-                      <input
-                        type="email"
-                        className="border-b pt-2 outline-none text-white text-[12px] w-full bg-transparent border-white"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full">
-                  <label className="text-[14px] text-white">
-                    Message
-                    <span className="text-[#BC1B06] text-[16px]">*</span>
-                  </label>
-                  <div>
-                    <textarea
-                      rows={4}
-                      className="border-b pt-2 text-white text-[12px] w-full  outline-none bg-transparent resize-none border-white"
+                    <input
+                      type="email"
+                      className="border-b pt-2 outline-none text-white text-[12px] w-full bg-transparent border-white"
                     />
                   </div>
                 </div>
-                <div className="flex items-center justify-between pt-7">
-                  <div className="text-[14px] text-white">
-                    <span className="text-[#BC1B06] text-[16px]">*</span>
+                <div className="w-full mb-6">
+                  <label className="text-[12px] lg:text-[14px] text-white">
+                    Message
+                    <span className="text-[#BC1B06] text-[14px] lg:text-[16px]">
+                      *
+                    </span>
+                  </label>
+                  <textarea
+                    rows={4}
+                    className="border-b pt-2 text-white text-[12px] w-full outline-none bg-transparent resize-none border-white"
+                  />
+                </div>
+                <div className="flex flex-col lg:flex-row items-center lg:justify-between">
+                  <div className="text-[12px] lg:text-[14px] text-white mb-4 lg:mb-0">
+                    <span className="text-[#BC1B06] text-[14px] lg:text-[16px]">
+                      *
+                    </span>
                     Mandatory Fields
                   </div>
                   <button
@@ -171,7 +176,7 @@ const Footer = () => {
                         : location.pathname === "/infrastructure"
                         ? "bg-[#08529D]"
                         : "bg-[#BB1B06]"
-                    } font-semibold py-[12px] px-[18px]`}
+                    } font-semibold py-2 px-4 lg:py-[12px] lg:px-[18px]`}
                   >
                     Get started
                     <MdArrowOutward size={20} />
@@ -180,7 +185,7 @@ const Footer = () => {
               </form>
             </div>
           </div>
-          <h1 className="absolute bottom-[80px] left-[56px] text-[#D0D5DD] text-[14px] font-MerriRegular">
+          <h1 className="absolute bottom-4 lg:bottom-8 left-4 lg:left-[56px] text-[#D0D5DD] text-[12px] lg:text-[14px] font-MerriRegular">
             © 2077 Untitled UI. All rights reserved.
           </h1>
         </div>
