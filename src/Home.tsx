@@ -136,7 +136,7 @@ const Home = () => {
 
       {/* Recent News */}
       <div className="bg-[#F8F8F8] px-4 sm:px-6 md:px-8 lg:px-[5%] py-[40px] md:py-[60px] lg:py-[80px]">
-        <div className="max-w-[80rem] w-full ">
+        <div className="max-w-[80rem] w-full mx-auto">
           <div className="flex items-center pb-7 justify-between">
             <h1 className="text-[#182736] text-[20px] sm:text-[22px] md:text-[24px] font-MerriSemiBold">
               Recent News
