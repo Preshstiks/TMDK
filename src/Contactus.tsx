@@ -1,21 +1,21 @@
 import Map from "./assets/img/map.webp";
 const Contactus = () => {
   return (
-    <div className="px-[7%]">
+    <div className="px-[5%] md:px-[7%]">
       <div>
-        <div>
+        <div className="max-w-[80rem] w-full mx-auto">
           {/* Contact us form */}
-          <div className="flex gap-[50px] py-[80px]">
-            <div className=" w-1/2">
-              <h1 className="text-[43px] pb-3 text-[#101828] font-MerriSemiBold">
+          <div className="flex flex-col md:flex-row gap-[30px] md:gap-[50px] py-[40px] md:py-[80px]">
+            <div className="w-full md:w-1/2">
+              <h1 className="text-[30px] md:text-[43px] pb-2 md:pb-3 text-[#101828] font-MerriSemiBold">
                 Contact us
               </h1>
-              <h1 className="text-[17px] text-[#475467] font-MerriRegular">
+              <h1 className="text-[15px] md:text-[17px] text-[#475467] font-MerriRegular">
                 Our friendly team would love to hear from you.
               </h1>
 
-              <form className="pt-[70px]">
-                <div className="flex justify-between pb-5 space-x-4">
+              <form className="pt-[50px] md:pt-[70px]">
+                <div className="flex flex-col md:flex-row justify-between pb-5 space-y-5 md:space-y-0 md:space-x-4">
                   <div className="w-full">
                     <label className="text-[12px] gap-1 flex font-MerriMedium text-[#344054]">
                       First name
@@ -93,24 +93,25 @@ const Contactus = () => {
                 </button>
               </form>
             </div>
-            <img src={Map} className="w-1/2" alt="map" />
+            <img src={Map} className="w-full md:w-1/2" alt="map" />
           </div>
-
-          {/* Our locations */}
-          <div>
-            <div className="bg-[#F8F8F8] flex justify-between py-[80px] my-[80px] px-[40px]">
-              <div className="w-[40%]">
+        </div>
+        {/* Our locations */}
+        <div>
+          <div className="bg-[#F8F8F8] py-[40px] md:py-[80px] my-[40px] md:my-[80px] px-[20px] md:px-[40px]">
+            <div className="max-w-[80rem] flex flex-col md:flex-row justify-between w-full mx-auto">
+              <div className="w-full md:w-[40%]">
                 <h1 className="text-[13px] text-[#BB1B06] pb-2 font-MerriSemiBold">
                   Our locations
                 </h1>
-                <h1 className="text-[#101828] pb-5 text-[30px] font-MerriSemiBold">
+                <h1 className="text-[#101828] pb-5 text-[24px] md:text-[30px] font-MerriSemiBold">
                   Visit our Offices
                 </h1>
                 <h1 className="text-[#475467] font-MerriRegular">
                   Find us at these locations.
                 </h1>
               </div>
-              <div className="w-[30%]">
+              <div className="w-full md:w-[30%] pt-5 md:pt-0">
                 <div>
                   <h1 className="text-[17px] pb-3 text-[#101828] font-MerriSemiBold">
                     Lagos
@@ -142,7 +143,7 @@ const Contactus = () => {
                   </h1>
                 </div>
               </div>
-              <div className="w-[30%]">
+              <div className="w-full md:w-[30%] pt-5 md:pt-0">
                 <div>
                   <h1 className="text-[17px] pb-3 text-[#101828] font-MerriSemiBold">
                     Lagos
