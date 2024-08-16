@@ -19,10 +19,11 @@ import InfraDark from "../../assets/img/infradark.webp";
 const LightNavbar = () => {
   const [nav, setNav] = useState(false);
   const [industries, setIndustries] = useState(false);
+  const [mobileIndustries, setMobileIndustries] = useState(false);
   const [navOneHover, setNavOneHover] = useState(false);
   const [navTwoHover, setNavTwoHover] = useState(false);
   const [navThreeHover, setNavThreeHover] = useState(false);
-
+  const [mobileNav, setMobileNav] = useState(true);
   const handleNavOneMouseEnter = () => {
     setNavOneHover(true);
   };
@@ -48,11 +49,20 @@ const LightNavbar = () => {
   const toggleIndustries = () => {
     setIndustries(!industries);
   };
-
+  const toggleMobileIndustries = () => {
+    setMobileIndustries(!mobileIndustries);
+  };
+  const toggleMobileMenu = () => {
+    setMobileNav((prev) => !prev);
+  };
+  const closeMobileNav = () => {
+    setMobileNav(false);
+    setMobileIndustries(false);
+  };
   const location = useLocation();
   return (
     <nav
-      className={`flex justify-center${
+      className={`flex relative justify-center${
         location.pathname === "/petrochemical" ? "bg-[#141C21]" : ""
       } py-5 relative px-[5%] ${
         industries
@@ -89,7 +99,7 @@ const LightNavbar = () => {
           )}
         </Link>
         <div
-          className={`sm:flex hidden ${
+          className={`flex ${
             industries
               ? "text-white"
               : location.pathname === "/petrochemical"
@@ -139,7 +149,36 @@ const LightNavbar = () => {
           >
             +234 900 900 9000
           </div>
-          <button onClick={toggleNav}>
+          <button className="md:block hidden" onClick={toggleNav}>
+            {nav ? (
+              <IoClose
+                size={23}
+                className={
+                  location.pathname === "/agropark"
+                    ? "text-[#182F2A]"
+                    : location.pathname === "/petrochemical"
+                    ? "text-[#E6712D]"
+                    : location.pathname === "/infrastructure"
+                    ? "text-[#182F2A]"
+                    : "text-[#BB1B06]"
+                }
+              />
+            ) : (
+              <FiMenu
+                size={23}
+                className={
+                  location.pathname === "/agropark"
+                    ? "text-[#182F2A]"
+                    : location.pathname === "/petrochemical"
+                    ? "text-[#E6712D]"
+                    : location.pathname === "/infrastructure"
+                    ? "text-[#182F2A]"
+                    : "text-[#BB1B06]"
+                }
+              />
+            )}
+          </button>
+          <button className="block md:hidden" onClick={toggleMobileMenu}>
             {nav ? (
               <IoClose
                 size={23}
@@ -327,6 +366,81 @@ const LightNavbar = () => {
           </div>
         )}
       </div>
+      {mobileNav && (
+        <div className="absolute top-[110px] z-50 left-0 right-0">
+          <div
+            className={`w-full h-screen  ${
+              location.pathname === "/petrochemical"
+                ? "bg-[#141C21]"
+                : "bg-white"
+            }`}
+          >
+            <div
+              className={`${
+                industries
+                  ? "text-white"
+                  : location.pathname === "/petrochemical"
+                  ? "text-white"
+                  : "text-[#141C21]"
+              } text-[17px] font-MerriRegular flex flex-col pt-[60px] items-center space-x-[20px]`}
+            >
+              <Link onClick={closeMobileNav} className="mb-3" to="/about">
+                About
+              </Link>
+              <div
+                className={`flex items-center mb-3 ${
+                  industries
+                    ? location.pathname === "/"
+                      ? "border-b-[1.5px] border-white text-white"
+                      : location.pathname === "/agropark"
+                      ? "border-b-[1.5px] border-[#D2EB75] text-[#D2EB75]"
+                      : location.pathname === "/petrochemical"
+                      ? "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
+                      : " border-b-[1.5px] border-[#08529D] text-[#08529D]"
+                    : location.pathname !== "/petrochemical"
+                    ? "text-[#141C21]"
+                    : "text-white"
+                } gap-2`}
+              >
+                Industries
+                <button onClick={toggleMobileIndustries}>
+                  {mobileIndustries ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </button>
+              </div>
+              {mobileIndustries && (
+                <div className="flex flex-col py-4 text-[14px] pl-[30px]">
+                  <Link
+                    onClick={closeMobileNav}
+                    className="pb-3"
+                    to="/agropark"
+                  >
+                    AgroPark
+                  </Link>
+                  <Link
+                    onClick={closeMobileNav}
+                    className="pb-3"
+                    to="/petrochemical"
+                  >
+                    Petrochemical
+                  </Link>
+                  <Link onClick={closeMobileNav} to="/infrastructure">
+                    Infrastructure
+                  </Link>
+                </div>
+              )}
+              <Link onClick={closeMobileNav} className="mb-3" to="/news">
+                News/Media
+              </Link>
+              <Link onClick={closeMobileNav} className="mb-3" to="/career">
+                Career
+              </Link>
+              <Link onClick={closeMobileNav} to="/contact">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
