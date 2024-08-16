@@ -369,7 +369,7 @@ const LightNavbar = () => {
         )}
       </div>
       {mobileNav && (
-        <div className="absolute top-[110px] z-50 left-0 right-0">
+        <div className="absolute top-[100px] z-50 left-0 right-0">
           <div
             className={`w-full h-screen  ${
               location.pathname === "/petrochemical"
