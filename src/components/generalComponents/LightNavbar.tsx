@@ -98,41 +98,43 @@ const LightNavbar = () => {
             <img src={Logo} alt="logo" />
           )}
         </Link>
-        <div
-          className={`flex ${
-            industries
-              ? "text-white"
-              : location.pathname === "/petrochemical"
-              ? "text-white"
-              : "text-[#141C21]"
-          } text-[17px] font-MerriRegular items-center ${
-            nav ? "block" : "hidden"
-          } space-x-[20px]`}
-        >
-          <Link to="/about">About</Link>
+        <div className="md:block hidden">
           <div
-            className={`flex items-center ${
+            className={`flex ${
               industries
-                ? location.pathname === "/"
-                  ? "border-b-[1.5px] border-white text-white"
-                  : location.pathname === "/agropark"
-                  ? "border-b-[1.5px] border-[#D2EB75] text-[#D2EB75]"
-                  : location.pathname === "/petrochemical"
-                  ? "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
-                  : " border-b-[1.5px] border-[#08529D] text-[#08529D]"
-                : location.pathname !== "/petrochemical"
-                ? "text-[#141C21]"
-                : "text-white"
-            } gap-2`}
+                ? "text-white"
+                : location.pathname === "/petrochemical"
+                ? "text-white"
+                : "text-[#141C21]"
+            } text-[17px] font-MerriRegular items-center ${
+              nav ? "block" : "hidden"
+            } space-x-[20px]`}
           >
-            Industries
-            <button onClick={toggleIndustries}>
-              {industries ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            </button>
+            <Link to="/about">About</Link>
+            <div
+              className={`flex items-center ${
+                industries
+                  ? location.pathname === "/"
+                    ? "border-b-[1.5px] border-white text-white"
+                    : location.pathname === "/agropark"
+                    ? "border-b-[1.5px] border-[#D2EB75] text-[#D2EB75]"
+                    : location.pathname === "/petrochemical"
+                    ? "border-b-[1.5px] border-[#E6712D] text-[#E6712D]"
+                    : " border-b-[1.5px] border-[#08529D] text-[#08529D]"
+                  : location.pathname !== "/petrochemical"
+                  ? "text-[#141C21]"
+                  : "text-white"
+              } gap-2`}
+            >
+              Industries
+              <button onClick={toggleIndustries}>
+                {industries ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              </button>
+            </div>
+            <Link to="/news">News/Media</Link>
+            <Link to="/career">Career</Link>
+            <Link to="/contact">Contact</Link>
           </div>
-          <Link to="/news">News/Media</Link>
-          <Link to="/career">Career</Link>
-          <Link to="/contact">Contact</Link>
         </div>
         <div className="flex items-center space-x-[20px]">
           <div
