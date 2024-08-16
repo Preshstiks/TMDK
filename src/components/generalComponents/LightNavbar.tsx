@@ -23,7 +23,7 @@ const LightNavbar = () => {
   const [navOneHover, setNavOneHover] = useState(false);
   const [navTwoHover, setNavTwoHover] = useState(false);
   const [navThreeHover, setNavThreeHover] = useState(false);
-  const [mobileNav, setMobileNav] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
   const handleNavOneMouseEnter = () => {
     setNavOneHover(true);
   };
