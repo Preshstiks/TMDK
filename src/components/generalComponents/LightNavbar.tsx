@@ -68,7 +68,7 @@ const LightNavbar = () => {
           : "bg-white"
       }`}
     >
-      <div className="flex justify-between max-w-[80rem] w-full items-center">
+      <div className="flex justify-between max-w-[80rem] mx-auto w-full items-center">
         <Link to="/" onClick={() => setIndustries(false)}>
           {industries ? (
             location.pathname === "/agropark" ? (
