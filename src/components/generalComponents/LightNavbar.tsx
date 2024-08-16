@@ -79,7 +79,30 @@ const LightNavbar = () => {
       }`}
     >
       <div className="flex justify-between max-w-[80rem] mx-auto w-full items-center">
-        <Link to="/" onClick={() => setIndustries(false)}>
+        <Link
+          to="/"
+          className="md:block hidden"
+          onClick={() => setIndustries(false)}
+        >
+          {industries ? (
+            location.pathname === "/agropark" ? (
+              <img src={AgroDark} alt="logo" />
+            ) : location.pathname === "/infrastructure" ? (
+              <img src={InfraDark} alt="logo" />
+            ) : (
+              <img src={whiteLogo} alt="logo" />
+            )
+          ) : location.pathname === "/agropark" ? (
+            <img src={greenLogo} alt="logo" />
+          ) : location.pathname === "/petrochemical" ? (
+            <img src={orangeLogo} alt="logo" />
+          ) : location.pathname === "/infrastructure" ? (
+            <img src={blueLogo} alt="logo" />
+          ) : (
+            <img src={Logo} alt="logo" />
+          )}
+        </Link>
+        <Link to="/" className="md:hidden block" onClick={closeMobileNav}>
           {industries ? (
             location.pathname === "/agropark" ? (
               <img src={AgroDark} alt="logo" />
